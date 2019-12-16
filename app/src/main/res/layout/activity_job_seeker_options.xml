@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobSeekerFunctions.JobSeekerOptions">
+
+    <Button
+        android:id="@+id/viewJobsBtnJSOAct"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="View Jobs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"/>
+
+    <Button
+        android:id="@+id/editCVBtnJSOAct"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="Edit CV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_below="@id/viewJobsBtnJSOAct"
+        />
+
+</RelativeLayout>

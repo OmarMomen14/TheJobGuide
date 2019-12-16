@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.thejobguide">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".EmployerFunctions.AddNewJobDetails"></activity>
+        <activity android:name=".EmployerFunctions.FindEmployees" />
+        <activity android:name=".EmployerFunctions.AddJob" />
+        <activity android:name=".EmployerFunctions.EmployerOptions" />
+        <activity android:name=".JobSeekerFunctions.EditCV" />
+        <activity android:name=".JobSeekerFunctions.ViewJobs" />
+        <activity android:name=".JobSeekerFunctions.JobSeekerOptions" />
+        <activity android:name=".LoginAndSignup.SignUp" />
+        <activity android:name=".LoginAndSignup.LogIn" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
