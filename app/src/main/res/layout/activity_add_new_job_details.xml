@@ -1,9 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EmployerFunctions.AddNewJobDetails">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/jobTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Title"/>
+
+
+    <EditText
+        android:id="@+id/jobTitleET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:inputType="textPersonName"
+        android:hint="Software developer"
+        android:layout_below="@id/jobTitleTV"
+        />
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/jobDescTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Description"
+        android:layout_below="@id/jobTitleET"
+        />
+
+
+    <EditText
+        android:id="@+id/jobDescET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:inputType="textMultiLine"
+        android:hint="Software developer job's description is..."
+        android:layout_below="@id/jobDescTV"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/jobTasksTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Tasks"
+        android:layout_below="@id/jobDescET"
+        />
+
+    <TextView
+        android:id="@+id/jobTasksDetailsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No tasks added yet."
+        android:textSize="10sp"
+        android:layout_below="@id/jobTasksTV"
+        />
+
+    <EditText
+        android:id="@+id/jobTasksET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:textSize="12sp"
+        android:hint="type the task here and click add"
+        android:layout_below="@id/jobTasksDetailsTV"
+        />
+
+    <Button
+        android:id="@+id/addTaskBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jobTasksDetailsTV"
+        android:layout_toRightOf="@id/jobTasksET"
+        android:text="Add"
+        android:layout_marginLeft="10dp"
+        android:textSize="10sp"/>
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/jobSkillsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Skills"
+        android:layout_below="@id/jobTasksET"
+        />
+
+    <TextView
+        android:id="@+id/jobSkillsDetailsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No skills added yet."
+        android:textSize="10sp"
+        android:layout_below="@id/jobSkillsTV"
+        />
+
+
+
+
+    <EditText
+        android:id="@+id/jobSkillsET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="12sp"
+        android:hint="type the skill name here"
+        android:layout_below="@id/jobSkillsDetailsTV"
+        />
+
+    <EditText
+        android:id="@+id/jobSkillsRateET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="12sp"
+        android:hint="type the skill required strength level on a 1-5 scale"
+        android:layout_below="@id/jobSkillsET"
+        />
+
+
+    <EditText
+        android:id="@+id/jobSkillsProjectsET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:inputType="textMultiLine"
+        android:hint="Type the proposed projects for proving this skill..."
+        android:layout_below="@id/jobSkillsRateET"
+        />
+
+
+    <EditText
+        android:id="@+id/jobSkillsCertET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="12sp"
+        android:hint="type the suggested certification or courses"
+        android:layout_below="@id/jobSkillsProjectsET"
+        />
+
+    <Button
+        android:id="@+id/addSkillBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jobSkillsDetailsTV"
+        android:layout_toRightOf="@id/jobSkillsET"
+        android:text="Add"
+        android:layout_marginLeft="10dp"
+        android:textSize="10sp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/jobSalaryTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Salary"
+        android:layout_below="@+id/jobSkillsCertET"/>
+
+    <EditText
+        android:id="@+id/jobSalaryET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="12sp"
+        android:hint="type the starting salary"
+        android:layout_below="@id/jobSalaryTV"
+        />
+
+
+    <Button
+        android:id="@+id/addJobToDbBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add job"
+        android:layout_below="@+id/jobSalaryET"/>
+
+
+
+</RelativeLayout>

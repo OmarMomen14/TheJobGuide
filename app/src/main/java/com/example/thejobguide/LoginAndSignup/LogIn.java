@@ -106,6 +106,7 @@ public class LogIn extends AppCompatActivity {
                                 loadingBar.dismiss();
                                 Toast.makeText(LogIn.this, "You logged in successfully",Toast.LENGTH_LONG).show();
                                 Intent intent2 = new Intent(LogIn.this, EmployerOptions.class);
+                                intent2.putExtra("userEmail",email);
                                 startActivity(intent2);
                             }
                         } else {

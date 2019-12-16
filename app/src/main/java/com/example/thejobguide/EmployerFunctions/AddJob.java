@@ -12,11 +12,14 @@ import com.example.thejobguide.R;
 public class AddJob extends AppCompatActivity {
 
     private ImageView computerBtnIm, engineerBtnIm, medecineBtnIm;
+    private String userEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_job);
+
+        userEmail = getIntent().getExtras().get("userEmail").toString();
 
         computerBtnIm = (ImageView) findViewById(R.id.computerCategoryBtnAJAct);
         engineerBtnIm = (ImageView) findViewById(R.id.engineerCategoryBtnAJAct);
@@ -27,6 +30,7 @@ public class AddJob extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(AddJob.this, AddNewJobDetails.class);
                 intent.putExtra("field","computer");
+                intent.putExtra("userEmail",userEmail);
                 startActivity(intent);
             }
         });

@@ -18,13 +18,23 @@
         android:layout_marginTop="0dp"/>
 
     <Button
+        android:id="@+id/viewJobsBtnEOAct"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="View My Jobs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_below="@id/addJobBtnEOAct"
+        />
+
+    <Button
         android:id="@+id/findEmployeeBtnEOAct"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:text="Find Employees"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
-        android:layout_below="@id/addJobBtnEOAct"
+        android:layout_below="@id/viewJobsBtnEOAct"
         />
 
 </RelativeLayout>
