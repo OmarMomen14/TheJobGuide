@@ -5,89 +5,265 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmployerFunctions.AddJob">
+    tools:context=".EmployerFunctions.AddJob"
+    >
 
 
     <TextView
         android:id="@+id/TV1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose a field"
-        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:text="Choose an industry field"
+        android:fontFamily="sans-serif-medium"
         android:textSize="30sp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
         />
 
-
-
-
-    <LinearLayout
-        android:id="@+id/rowsLayout"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/TV1"
-        android:orientation="vertical"
+        android:layout_below="@id/TV1"
+        android:stretchColumns="0,1,2"
         >
 
-
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            <ImageView
+                android:id="@+id/softwareBtnAJAct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/software_pic"
+                android:layout_weight="1"
+                />
 
-                <ImageView
-                    android:id="@+id/computerCategoryBtnAJAct"
-                    android:layout_width="100dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/job_1_icon"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Computer Science"
-                    android:textSize="15sp"/>
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/datascienceAJAct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ds_pic"
+                android:layout_weight="1"
+                />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            <ImageView
+                android:id="@+id/gameBtnAJAct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/game"
+                android:layout_weight="1"
+                />
 
-                <ImageView
-                    android:id="@+id/engineerCategoryBtnAJAct"
-                    android:layout_width="100dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/job_1_icon"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Engineering"
-                    android:textSize="15sp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/medecineCategoryBtnAJAct"
-                    android:layout_width="100dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/job_1_icon"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Medecine"
-                    android:textSize="15sp"/>
-            </LinearLayout>
-
-        </LinearLayout>
+        </TableRow>
 
 
-    </LinearLayout>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Software Development"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:paddingBottom="15dp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Data Science"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:paddingBottom="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Game Development"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:paddingBottom="15dp"
+                />
+
+        </TableRow>
+
+
+
+
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/networksBtnAJAct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/networks"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:id="@+id/robotBtnAJAct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/robot"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:id="@+id/copmutervisionBtnAJAct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/computervision"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Networks"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:paddingBottom="15dp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Robotics"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:paddingBottom="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Computer Vision"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:paddingBottom="15dp"
+                />
+
+        </TableRow>
+
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/securityBtnAJAct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/security"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:id="@+id/databaseBtnAJAct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/database"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:id="@+id/blockchainBtnAJAct"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/blockchain"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Security"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:paddingBottom="15dp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Database"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:paddingBottom="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Blockchain"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:paddingBottom="15dp"
+                />
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+
 
 </RelativeLayout>
