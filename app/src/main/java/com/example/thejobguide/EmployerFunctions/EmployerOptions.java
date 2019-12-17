@@ -12,7 +12,7 @@ import com.example.thejobguide.R;
 public class EmployerOptions extends AppCompatActivity {
 
 
-    private Button addJobBtn, findEmployBtn;
+    private Button addJobBtn, findEmployBtn, viewMyJobsBtn;
     private String userEmail;
 
     @Override
@@ -24,6 +24,7 @@ public class EmployerOptions extends AppCompatActivity {
 
         addJobBtn = (Button) findViewById(R.id.addJobBtnEOAct);
         findEmployBtn = (Button) findViewById(R.id.findEmployeeBtnEOAct);
+        viewMyJobsBtn = (Button) findViewById(R.id.viewJobsBtnEOAct);
 
         addJobBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +39,15 @@ public class EmployerOptions extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EmployerOptions.this, FindEmployees.class);
+                startActivity(intent);
+            }
+        });
+
+        viewMyJobsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EmployerOptions.this, ViewMyJobs.class);
+                intent.putExtra("userEmail",userEmail);
                 startActivity(intent);
             }
         });

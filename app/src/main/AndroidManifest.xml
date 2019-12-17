@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EmployerFunctions.ViewMyJobs"></activity>
+        <activity android:name=".EmployerFunctions.ViewJobDetails"></activity>
+        <activity android:name=".EmployerFunctions.ViewMyJobs" />
         <activity android:name=".EmployerFunctions.AddNewJobDetails" />
         <activity android:name=".EmployerFunctions.FindEmployees" />
         <activity android:name=".EmployerFunctions.AddJob" />

@@ -154,6 +154,7 @@ public class AddNewJobDetails extends AppCompatActivity {
 
             proccessAddingJob(jobTitle, jobDesc, jobSalary);
             Intent intent = new Intent(AddNewJobDetails.this, EmployerOptions.class);
+            intent.putExtra("userEmail",userEmail);
             startActivity(intent);
         }
     }
