@@ -1,4 +1,4 @@
-package com.example.thejobguide.EmployerFunctions;
+package com.example.thejobguide.JobSeekerFunctions;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.thejobguide.EmployerFunctions.ViewJobDetails;
 import com.example.thejobguide.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ViewJobDetails extends AppCompatActivity {
+public class ViewJobsInFieldDetails extends AppCompatActivity {
 
     private String jobID;
     private TextView titleTV, descTV, salaryTV, fieldTv;
@@ -30,20 +30,21 @@ public class ViewJobDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_job_details);
+        setContentView(R.layout.activity_view_jobs_in_field_details);
 
         jobID = getIntent().getExtras().get("key").toString();
-        titleTV = (TextView) findViewById(R.id.jobTitleTvVMJA);
-        descTV = (TextView) findViewById(R.id.jobDescTvVMJA);
-        fieldTv = (TextView) findViewById(R.id.jobFieldTvVMJA);
-        salaryTV = (TextView) findViewById(R.id.jobSalaryTvVMJA);
-        skillsListView = (ListView) findViewById(R.id.skillsListView);
-        tasksListView = (ListView) findViewById(R.id.tasksListView);
+        titleTV = (TextView) findViewById(R.id.jobTitleTvVJIFA);
+        descTV = (TextView) findViewById(R.id.jobDescTvVJIFA);
+        fieldTv = (TextView) findViewById(R.id.jobFieldTvVJIFA);
+        salaryTV = (TextView) findViewById(R.id.jobSalaryTvVJIFA);
+        skillsListView = (ListView) findViewById(R.id.skillsListViewVJIFA);
+        tasksListView = (ListView) findViewById(R.id.tasksListViewVJIFA);
 
         fetchJobData(jobID);
-
-
     }
+
+
+
 
     private void fetchJobData(final String jobID) {
 
@@ -75,16 +76,16 @@ public class ViewJobDetails extends AppCompatActivity {
                     String skillCert = next.child("certs").getValue().toString();
 
                     String skillAllText = skillTitle + "\n" +
-                                          "Strength Level: " + skillRate + "\n" +
-                                          "Suggested projects: " + skillProjects + "\n" +
-                                          "Reccommended Certificates: " + skillCert;
+                            "Strength Level: " + skillRate + "\n" +
+                            "Suggested projects: " + skillProjects + "\n" +
+                            "Reccommended Certificates: " + skillCert;
 
                     skillsListText.add(skillAllText);
 
 
                 }
 
-                skillsAdapter = new ArrayAdapter<>(ViewJobDetails.this, android.R.layout.simple_list_item_1, skillsListText);
+                skillsAdapter = new ArrayAdapter<>(ViewJobsInFieldDetails.this, android.R.layout.simple_list_item_1, skillsListText);
                 skillsListView.setAdapter(skillsAdapter);
 
 
@@ -98,7 +99,7 @@ public class ViewJobDetails extends AppCompatActivity {
                     tasksListText.add(theDescription);
                 }
 
-                tasksAdapter = new ArrayAdapter<>(ViewJobDetails.this, android.R.layout.simple_list_item_1, tasksListText);
+                tasksAdapter = new ArrayAdapter<>(ViewJobsInFieldDetails.this, android.R.layout.simple_list_item_1, tasksListText);
                 tasksListView.setAdapter(tasksAdapter);
             }
 
@@ -107,6 +108,5 @@ public class ViewJobDetails extends AppCompatActivity {
 
             }
         });
-
     }
 }

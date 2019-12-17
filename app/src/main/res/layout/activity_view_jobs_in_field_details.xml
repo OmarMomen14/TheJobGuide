@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EmployerFunctions.ViewJobDetails">
+    tools:context=".JobSeekerFunctions.ViewJobsInFieldDetails">
+
 
 
     <TextView
@@ -16,7 +17,7 @@
         />
 
     <TextView
-        android:id="@+id/jobTitleTvVMJA"
+        android:id="@+id/jobTitleTvVJIFA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="" />
@@ -28,7 +29,7 @@
         />
 
     <TextView
-        android:id="@+id/jobFieldTvVMJA"
+        android:id="@+id/jobFieldTvVJIFA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="" />
@@ -40,7 +41,7 @@
         />
 
     <TextView
-        android:id="@+id/jobDescTvVMJA"
+        android:id="@+id/jobDescTvVJIFA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
@@ -54,7 +55,7 @@
         />
 
     <ListView
-        android:id="@+id/tasksListView"
+        android:id="@+id/tasksListViewVJIFA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
@@ -66,7 +67,7 @@
         />
 
     <ListView
-        android:id="@+id/skillsListView"
+        android:id="@+id/skillsListViewVJIFA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
@@ -79,21 +80,9 @@
         />
 
     <TextView
-        android:id="@+id/jobSalaryTvVMJA"
+        android:id="@+id/jobSalaryTvVJIFA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete"/>
-
-
 
 </LinearLayout>

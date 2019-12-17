@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EmployerFunctions.ViewJobDetails"></activity>
+        <activity android:name=".JobSeekerFunctions.ViewJobsInFieldDetails"></activity>
+        <activity android:name=".JobSeekerFunctions.ViewJobsInField" />
+        <activity android:name=".EmployerFunctions.ViewJobDetails" />
         <activity android:name=".EmployerFunctions.ViewMyJobs" />
         <activity android:name=".EmployerFunctions.AddNewJobDetails" />
         <activity android:name=".EmployerFunctions.FindEmployees" />
