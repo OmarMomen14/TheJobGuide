@@ -1,40 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmployerFunctions.EmployerOptions">
-
+    tools:context=".EmployerFunctions.EmployerOptions"
+    android:orientation="vertical"
+    android:padding="0dp"
+    >
 
 
     <Button
         android:id="@+id/addJobBtnEOAct"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:text="Add Job"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"/>
+        android:layout_weight="1"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:background="#ACADBC"
+        />
 
     <Button
         android:id="@+id/viewJobsBtnEOAct"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:text="View My Jobs"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:layout_below="@id/addJobBtnEOAct"
+        android:layout_weight="1"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:background="#9B9ECE"
         />
 
     <Button
         android:id="@+id/findEmployeeBtnEOAct"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:text="Find Employees"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:layout_below="@id/viewJobsBtnEOAct"
+        android:layout_weight="1"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:background="#6665DD"
         />
 
-</RelativeLayout>
+</LinearLayout>
