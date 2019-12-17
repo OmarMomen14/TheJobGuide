@@ -85,14 +85,17 @@
         android:text="" />
 
     <Button
+        android:id="@+id/editBtnVJDA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Edit"/>
 
     <Button
+        android:id="@+id/deleteBtnVJDA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete"/>
+        android:text="Delete"
+        />
 
 
 

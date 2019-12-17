@@ -3,7 +3,9 @@ package com.example.thejobguide.EmployerFunctions;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +28,7 @@ public class ViewJobDetails extends AppCompatActivity {
     private ArrayList<String> skillsListText = new ArrayList<String>();
     private ArrayList<String> tasksListText = new ArrayList<String>();
     private ArrayAdapter skillsAdapter, tasksAdapter;
+    private Button editBtn, deleteBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,15 @@ public class ViewJobDetails extends AppCompatActivity {
         salaryTV = (TextView) findViewById(R.id.jobSalaryTvVMJA);
         skillsListView = (ListView) findViewById(R.id.skillsListView);
         tasksListView = (ListView) findViewById(R.id.tasksListView);
+        editBtn = (Button) findViewById(R.id.editBtnVJDA);
+        deleteBtn = (Button) findViewById(R.id.deleteBtnVJDA);
+
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
 
         fetchJobData(jobID);
 
