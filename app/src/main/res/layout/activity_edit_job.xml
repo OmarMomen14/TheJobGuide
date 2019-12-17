@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmployerFunctions.EditJob">
+
+    <TextView
+        android:id="@+id/jobTitleTVEJA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Title"/>
+
+
+    <EditText
+        android:id="@+id/jobTitleETEJA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:inputType="textPersonName"
+        android:hint="Software developer"
+        android:layout_below="@id/jobTitleTVEJA"
+        />
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/jobDescTVEJA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Description"
+        android:layout_below="@id/jobTitleETEJA"
+        />
+
+
+    <EditText
+        android:id="@+id/jobDescETEJA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:inputType="textMultiLine"
+        android:hint="Software developer job's description is..."
+        android:layout_below="@id/jobDescTVEJA"
+        />
+
+
+    <TextView
+        android:id="@+id/jobSalaryTVEJA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Salary"
+        android:layout_below="@+id/jobDescETEJA"/>
+
+    <EditText
+        android:id="@+id/jobSalaryETEJA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="12sp"
+        android:hint="type the starting salary"
+        android:layout_below="@id/jobSalaryTVEJA"
+        />
+
+
+    <Button
+        android:id="@+id/editBtnEJA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit job"
+        android:layout_below="@+id/jobSalaryETEJA"/>
+
+</RelativeLayout>

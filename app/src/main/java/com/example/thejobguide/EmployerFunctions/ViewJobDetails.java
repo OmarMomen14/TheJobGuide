@@ -2,6 +2,9 @@ package com.example.thejobguide.EmployerFunctions;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -22,7 +25,7 @@ import java.util.Iterator;
 
 public class ViewJobDetails extends AppCompatActivity {
 
-    private String jobID;
+    private String jobID, userEmail;
     private TextView titleTV, descTV, salaryTV, fieldTv;
     private ListView tasksListView, skillsListView;
     private ArrayList<String> skillsListText = new ArrayList<String>();
@@ -44,11 +47,46 @@ public class ViewJobDetails extends AppCompatActivity {
         tasksListView = (ListView) findViewById(R.id.tasksListView);
         editBtn = (Button) findViewById(R.id.editBtnVJDA);
         deleteBtn = (Button) findViewById(R.id.deleteBtnVJDA);
+        userEmail = getIntent().getExtras().get("userEmail").toString();
+
 
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                AlertDialog.Builder builder = new AlertDialog.Builder(ViewJobDetails.this);
+                builder.setCancelable(true);
+                builder.setTitle("Delete Job");
+                builder.setMessage("Are you sure you want to delete this job?");
+                builder.setPositiveButton("Confirm",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                final DatabaseReference rootRef;
+                                rootRef = FirebaseDatabase.getInstance().getReference();
+                                rootRef.child("Jobs").child(jobID).removeValue();
+                                Intent intent = new Intent(ViewJobDetails.this, ViewMyJobs.class);
+                                intent.putExtra("userEmail",userEmail);
+                                startActivity(intent);
+                            }
+                        });
+                builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ViewJobDetails.this, EditJob.class);
+                intent.putExtra("userEmail",userEmail);
+                intent.putExtra("key",jobID);
+                startActivity(intent);
             }
         });
 

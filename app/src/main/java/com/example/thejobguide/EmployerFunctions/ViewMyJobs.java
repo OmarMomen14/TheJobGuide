@@ -47,6 +47,7 @@ public class ViewMyJobs extends AppCompatActivity {
                 Intent myintent = new Intent(getBaseContext(),ViewJobDetails.class);
                 String jobKey = jobsKeys.get(position);
                 myintent.putExtra("key",jobKey);
+                myintent.putExtra("userEmail",userEmail);
                 startActivity(myintent);
             }
         });
