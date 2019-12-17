@@ -25,7 +25,8 @@ public class ViewMyJobs extends AppCompatActivity {
 
     private ListView simpleList;
     private ArrayList<String> listText = new ArrayList<String>();
-    private  ArrayAdapter AppAdapter;
+    private ArrayList<String> jobsKeys = new ArrayList<String>();
+    private ArrayAdapter AppAdapter;
 
     private String userEmail;
     @Override
@@ -44,7 +45,8 @@ public class ViewMyJobs extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent myintent = new Intent(getBaseContext(),ViewJobDetails.class);
-                myintent.putExtra("key",position);
+                String jobKey = jobsKeys.get(position);
+                myintent.putExtra("key",jobKey);
                 startActivity(myintent);
             }
         });
@@ -71,7 +73,9 @@ public class ViewMyJobs extends AppCompatActivity {
                     String owner = next.child("owner").getValue().toString();
                     if (owner.equals(userEmail)) {
                         String job = next.child("title").getValue().toString();
+                        String key = next.getKey();
                         listText.add(job);
+                        jobsKeys.add(key);
                     }
                 }
 
@@ -92,8 +96,6 @@ public class ViewMyJobs extends AppCompatActivity {
             }
         });
 
-        rootRef.removeEventListener(listener);
-        return;
 
     }
 
