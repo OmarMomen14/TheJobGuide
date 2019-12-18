@@ -6,11 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".EmployerFunctions.FindEmployees">
 
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff0033f3"
+        android:focusable="true"
+        android:hint="Search Name"
+        app:layout_constraintBottom_toBottomOf="@+id/jobsInFieldListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+    <ListView
+        android:id="@+id/jobsInFieldListView"
+        android:layout_width="fill_parent"
+        android:layout_height="500dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/search"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.726"></ListView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Find Employees"/>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

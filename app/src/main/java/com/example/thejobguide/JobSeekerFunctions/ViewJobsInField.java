@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.thejobguide.EmployerFunctions.ViewJobDetails;
@@ -28,6 +31,7 @@ public class ViewJobsInField extends AppCompatActivity {
     private ArrayList<String> listText = new ArrayList<String>();
     private ArrayList<String> jobsKeys = new ArrayList<String>();
     private ArrayAdapter AppAdapter;
+    private EditText Search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,27 @@ public class ViewJobsInField extends AppCompatActivity {
                 String jobKey = jobsKeys.get(position);
                 myintent.putExtra("key",jobKey);
                 startActivity(myintent);
+            }
+        });
+        Search = (EditText)findViewById(R.id.search);
+        Search.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
+                // When user changed the Text
+                (ViewJobsInField.this).AppAdapter.getFilter().filter(cs);
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,int arg3) {
+                // TODO Auto-generated method stub
+
+            }
+
+
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                // TODO Auto-generated method stub
             }
         });
 
@@ -87,6 +112,7 @@ public class ViewJobsInField extends AppCompatActivity {
                 } else {
                     AppAdapter = new ArrayAdapter<>(ViewJobsInField.this, android.R.layout.simple_list_item_1, listText);
                     simpleList.setAdapter(AppAdapter);
+
                 }
 
             }
