@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         signupBtn = (Button) findViewById(R.id.signupBtnMainAct);
         guestBtn = (Button) findViewById(R.id.guestBtnMainAct);
 
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

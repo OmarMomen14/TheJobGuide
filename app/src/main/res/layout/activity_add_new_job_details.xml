@@ -1,199 +1,429 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+
+<ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".EmployerFunctions.AddNewJobDetails">
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/jobTitleTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Job Title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".EmployerFunctions.AddNewJobDetails">
 
-    <EditText
-        android:id="@+id/jobTitleET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:inputType="textPersonName"
-        android:hint="Software developer"
-        android:layout_below="@id/jobTitleTV"
-        />
-
-
-
-
-
-
-    <TextView
-        android:id="@+id/jobDescTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Job Description"
-        android:layout_below="@id/jobTitleET"
-        />
-
-
-    <EditText
-        android:id="@+id/jobDescET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:inputType="textMultiLine"
-        android:hint="Software developer job's description is..."
-        android:layout_below="@id/jobDescTV"
-        />
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Add New Job"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:layout_marginTop="20dp"
+                />
 
 
 
+            <LinearLayout
+                android:id="@+id/jobTitleLinera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/titleTV"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                >
 
-    <TextView
-        android:id="@+id/jobTasksTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Job Tasks"
-        android:layout_below="@id/jobDescET"
-        />
+
+                <TextView
+                    android:id="@+id/jobTitleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Title"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="15sp"
+                    android:textColor="#000000"
+                    android:layout_marginRight="50dp"
+                    />
+
+                <EditText
+                    android:id="@+id/jobTitleET"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:inputType="textPersonName"
+                    android:hint="e.g Software developer"
+                    android:background="@drawable/et_bg"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="5dp"
+                    />
+
+            </LinearLayout>
+
+
+    <View
+        android:id="@+id/div1"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/jobTitleLinera"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        ></View>
+
+
+
+            <LinearLayout
+                android:id="@+id/jobDescLinear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/div1"
+                android:layout_centerHorizontal="true">
+
+
+                <TextView
+                            android:id="@+id/jobDescTV"
+                            android:text="Job Description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="15sp"
+                            android:textColor="#000000"
+                            android:layout_marginRight="50dp"
+                            />
+
+
+                        <EditText
+                            android:id="@+id/jobDescET"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:inputType="textMultiLine"
+                            android:hint="e.g Junior software developer"
+                            android:background="@drawable/et_bg"
+                            android:fontFamily="sans-serif-light"
+                            android:padding="5dp"
+                            />
+
+            </LinearLayout>
+
+
+    <View
+        android:id="@+id/div2"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/jobDescLinear"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        ></View>
+
+
+<LinearLayout
+                android:id="@+id/jobTaskLinear1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/div2"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/jobTasksTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginRight="50dp"
+                android:text="Job Tasks"
+                />
+
 
     <TextView
         android:id="@+id/jobTasksDetailsTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No tasks added yet."
-        android:textSize="10sp"
-        android:layout_below="@id/jobTasksTV"
-        />
-
-    <EditText
-        android:id="@+id/jobTasksET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:textSize="12sp"
-        android:hint="type the task here and click add"
-        android:layout_below="@id/jobTasksDetailsTV"
-        />
-
-    <Button
-        android:id="@+id/addTaskBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/jobTasksDetailsTV"
-        android:layout_toRightOf="@id/jobTasksET"
-        android:text="Add"
-        android:layout_marginLeft="10dp"
-        android:textSize="10sp"/>
-
-
-
-
-
-
-
-    <TextView
-        android:id="@+id/jobSkillsTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Job Skills"
-        android:layout_below="@id/jobTasksET"
-        />
-
-    <TextView
-        android:id="@+id/jobSkillsDetailsTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No skills added yet."
-        android:textSize="10sp"
-        android:layout_below="@id/jobSkillsTV"
+        android:fontFamily="sans-serif-light"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="No Tasks Added Yet."
         />
 
 
 
 
-    <EditText
-        android:id="@+id/jobSkillsET"
+</LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/jobTaskLinear2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:textSize="12sp"
-        android:hint="type the skill name here"
-        android:layout_below="@id/jobSkillsDetailsTV"
-        />
+        android:orientation="horizontal"
+        android:layout_below="@+id/jobTaskLinear1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        >
 
-    <EditText
-        android:id="@+id/jobSkillsRateET"
+
+        <Button
+            android:id="@+id/addTaskBtn"
+            android:text="Add new task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            android:background="@drawable/btn2_bg"
+            android:layout_marginRight="50dp"
+            />
+
+        <EditText
+            android:id="@+id/jobTasksET"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:inputType="textMultiLine"
+            android:hint="e.g Develop Frontend"
+            android:background="@drawable/et_bg"
+            android:fontFamily="sans-serif-light"
+            android:padding="5dp"
+            />
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/div3"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/jobTaskLinear2"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        ></View>
+
+
+    <LinearLayout
+        android:id="@+id/jobSkillLinear1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="12sp"
-        android:hint="type the skill required strength level on a 1-5 scale"
-        android:layout_below="@id/jobSkillsET"
-        />
+        android:orientation="horizontal"
+        android:layout_below="@+id/div3"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/jobSkillsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_marginRight="50dp"
+            android:text="Job Skills"
+            />
 
 
-    <EditText
-        android:id="@+id/jobSkillsProjectsET"
+        <TextView
+            android:id="@+id/jobSkillsDetailsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:text="No skills Added Yet."
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/jobSkillsLinear2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:inputType="textMultiLine"
-        android:hint="Type the proposed projects for proving this skill..."
-        android:layout_below="@id/jobSkillsRateET"
-        />
+        android:orientation="horizontal"
+        android:layout_below="@+id/jobSkillLinear1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        >
 
 
-    <EditText
-        android:id="@+id/jobSkillsCertET"
+        <Button
+            android:id="@+id/addSkillBtn"
+            android:text="Add new skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            android:background="@drawable/btn2_bg"
+            android:layout_marginRight="50dp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/jobSkillLinear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/jobSkillsET"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:inputType="textPersonName"
+                android:hint="e.g Java"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif-light"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+            <EditText
+                android:id="@+id/jobSkillsRateET"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:inputType="number"
+                android:hint="Input a rate on 1-5 scale"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif-light"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+            <EditText
+                android:id="@+id/jobSkillsProjectsET"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:inputType="textMultiLine"
+                android:hint="e.g Mobile App"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif-light"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+            <EditText
+                android:id="@+id/jobSkillsCertET"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:inputType="textMultiLine"
+                android:hint="e.g Udacity Nanodegree"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif-light"
+                android:padding="5dp"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/div4"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/jobSkillsLinear2"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        ></View>
+
+    <LinearLayout
+        android:id="@+id/jobSalaryLinear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:textSize="12sp"
-        android:hint="type the suggested certification or courses"
-        android:layout_below="@id/jobSkillsProjectsET"
-        />
-
-    <Button
-        android:id="@+id/addSkillBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/jobSkillsDetailsTV"
-        android:layout_toRightOf="@id/jobSkillsET"
-        android:text="Add"
-        android:layout_marginLeft="10dp"
-        android:textSize="10sp"/>
+        android:orientation="horizontal"
+        android:layout_below="@+id/div4"
+        android:layout_centerHorizontal="true">
 
 
+        <TextView
+            android:id="@+id/jobSalaryTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Salary"
+            android:fontFamily="sans-serif-light"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_marginRight="50dp"
+            />
 
 
-    <TextView
-        android:id="@+id/jobSalaryTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Job Salary"
-        android:layout_below="@+id/jobSkillsCertET"/>
+        <EditText
+            android:id="@+id/jobSalaryET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="12sp"
+            android:hint="Starting Salary in RM"
+            android:background="@drawable/et_bg"
+            android:fontFamily="sans-serif-light"
+            android:padding="5dp"
+            />
 
-    <EditText
-        android:id="@+id/jobSalaryET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="12sp"
-        android:hint="type the starting salary"
-        android:layout_below="@id/jobSalaryTV"
-        />
+    </LinearLayout>
 
 
     <Button
         android:id="@+id/addJobToDbBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Add job"
-        android:layout_below="@+id/jobSalaryET"/>
+        android:layout_below="@+id/jobSalaryLinear"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:background="@drawable/btn2_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        />
 
 
+        </RelativeLayout>
 
-</RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+

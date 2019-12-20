@@ -24,7 +24,7 @@ public class AddNewJobDetails extends AppCompatActivity {
     private String fieldName, userEmail;
     private EditText jobTitleET, jobDescET, jobTaskET, jobSkillNameET, jobSkillRateET, jobSkillProjectET, jobSkillCertET, jobSalaryET;
     private Button addTaskBtn, addSkillBtn, addJobBtn;
-    private TextView taskDetailsTV, skillsDetailsTV;
+    private TextView taskDetailsTV, skillsDetailsTV, pageTitleTV;
     private ProgressDialog loadingBar;
     ArrayList<String> tasksArray = new ArrayList<String>();
     ArrayList<String> skillsArray = new ArrayList<String>();
@@ -53,10 +53,14 @@ public class AddNewJobDetails extends AppCompatActivity {
         addSkillBtn = (Button) findViewById(R.id.addSkillBtn);
         addJobBtn = (Button) findViewById(R.id.addJobToDbBtn);
 
+        pageTitleTV = (TextView) findViewById(R.id.titleTV);
         taskDetailsTV = (TextView) findViewById(R.id.jobTasksDetailsTV);
         skillsDetailsTV = (TextView) findViewById(R.id.jobSkillsDetailsTV);
 
         loadingBar = new ProgressDialog(this);
+
+
+        pageTitleTV.setText("Add New " + fieldName+" Job");
 
         addTaskBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +74,7 @@ public class AddNewJobDetails extends AppCompatActivity {
                             ,"Please fill in the task",Toast.LENGTH_SHORT).show();
                 else {
                     tasksArray.add(task);
-                    if (currentDetails.equals("No tasks added yet.")) {
+                    if (currentDetails.equals("No Tasks Added Yet.")) {
                         taskDetailsTV.setText(task);
                     } else {
                         String newDetails = currentDetails + "\n" + task;
@@ -109,7 +113,7 @@ public class AddNewJobDetails extends AppCompatActivity {
                     skillsRateArray.add(skillRate);
                     skillsProjectsArray.add(skillProj);
                     skillsCertsArray.add(skillCert);
-                    if (currentDetails.equals("No skills added yet.")) {
+                    if (currentDetails.equals("No skills Added Yet.")) {
                         skillsDetailsTV.setText(skill);
                     } else {
                         String newDetails = currentDetails + "\n" + skill;
