@@ -82,10 +82,10 @@ public class ViewMyJobs extends AppCompatActivity {
 
                 if (listText.isEmpty()){
                     listText.add("No jobs added yet.");
-                    AppAdapter = new ArrayAdapter<>(ViewMyJobs.this, android.R.layout.simple_list_item_1, listText);
+                    AppAdapter = new ArrayAdapter<>(ViewMyJobs.this, R.layout.list_text1, listText);
                     simpleList.setAdapter(AppAdapter);
                 } else {
-                    AppAdapter = new ArrayAdapter<>(ViewMyJobs.this, android.R.layout.simple_list_item_1, listText);
+                    AppAdapter = new ArrayAdapter<>(ViewMyJobs.this, R.layout.list_text1, listText);
                     simpleList.setAdapter(AppAdapter);
                 }
 

@@ -94,11 +94,11 @@ public class FindEmployees extends AppCompatActivity {
 
                 if (listText.isEmpty()){
                     listText.add("No users yet.");
-                    AppAdapter = new ArrayAdapter<>(FindEmployees.this, android.R.layout.simple_list_item_1, listText);
+                    AppAdapter = new ArrayAdapter<>(FindEmployees.this, R.layout.list_text1, listText);
                     simpleList.setAdapter(AppAdapter);
                 }
                 else {
-                    AppAdapter = new ArrayAdapter<>(FindEmployees.this, android.R.layout.simple_list_item_1, listText);
+                    AppAdapter = new ArrayAdapter<>(FindEmployees.this, R.layout.list_text1, listText);
                     simpleList.setAdapter(AppAdapter);
 
                 }

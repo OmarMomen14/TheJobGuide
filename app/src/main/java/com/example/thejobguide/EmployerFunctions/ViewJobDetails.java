@@ -134,7 +134,7 @@ public class ViewJobDetails extends AppCompatActivity {
 
                 }
 
-                skillsAdapter = new ArrayAdapter<>(ViewJobDetails.this, android.R.layout.simple_list_item_1, skillsListText);
+                skillsAdapter = new ArrayAdapter<>(ViewJobDetails.this, R.layout.list_text2, skillsListText);
                 skillsListView.setAdapter(skillsAdapter);
 
 
@@ -148,7 +148,7 @@ public class ViewJobDetails extends AppCompatActivity {
                     tasksListText.add(theDescription);
                 }
 
-                tasksAdapter = new ArrayAdapter<>(ViewJobDetails.this, android.R.layout.simple_list_item_1, tasksListText);
+                tasksAdapter = new ArrayAdapter<>(ViewJobDetails.this, R.layout.list_text2, tasksListText);
                 tasksListView.setAdapter(tasksAdapter);
             }
 

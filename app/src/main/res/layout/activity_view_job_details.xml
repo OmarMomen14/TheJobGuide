@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorAccent"
+    android:padding="10dp"
+    >
+
+
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,97 +17,231 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EmployerFunctions.ViewJobDetails">
+    tools:context=".EmployerFunctions.ViewJobDetails"
+    android:background="@color/colorAccent"
+    >
 
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Job Title"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-light"
+        android:textSize="18sp"
+        android:textColor="#000000"
         />
+
+
 
     <TextView
         android:id="@+id/jobTitleTvVMJA"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text=""
+        android:fontFamily="sans-serif-light"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        />
+
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        ></View>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Field"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:textSize="18sp"
+        android:textColor="#000000"
         />
 
     <TextView
         android:id="@+id/jobFieldTvVMJA"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text=""
+        android:fontFamily="sans-serif-light"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        />
+
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        ></View>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Job Description"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:textSize="18sp"
+        android:textColor="#000000"
         />
 
     <TextView
         android:id="@+id/jobDescTvVMJA"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
+        android:fontFamily="sans-serif-light"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_gravity="center"
+        android:textStyle="bold"
         />
 
 
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        ></View>
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tasks"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:textSize="18sp"
+        android:textColor="#000000"
+
         />
 
     <ListView
+        android:layout_marginTop="10dp"
         android:id="@+id/tasksListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:divider="@color/colorPrimary"
+        android:dividerHeight="2dp"
         />
 
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        ></View>
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Skills"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:textSize="18sp"
+        android:textColor="#000000"
         />
 
     <ListView
+        android:layout_marginTop="10dp"
         android:id="@+id/skillsListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:divider="@color/colorPrimary"
+        android:dividerHeight="2dp"
         />
 
 
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        ></View>
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Starting Salary"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:textSize="18sp"
+        android:textColor="#000000"
         />
 
     <TextView
         android:id="@+id/jobSalaryTvVMJA"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text=""
+        android:fontFamily="sans-serif-light"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        />
+
+
+
 
     <Button
         android:id="@+id/editBtnVJDA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit"/>
+        android:text="Edit"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:background="@drawable/btn2_bg"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        />
 
     <Button
         android:id="@+id/deleteBtnVJDA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:background="@drawable/btn2_bg"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:text="Delete"
         />
 
 
 
 </LinearLayout>
+
+
+</ScrollView>

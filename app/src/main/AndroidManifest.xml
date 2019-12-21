@@ -16,6 +16,7 @@
         <activity android:name=".EmployerFunctions.ViewMyJobs" />
         <activity android:name=".EmployerFunctions.AddNewJobDetails" />
         <activity android:name=".EmployerFunctions.FindEmployees" />
+        <activity android:name=".EmployerFunctions.FindEmployeesDetails" />
         <activity android:name=".EmployerFunctions.AddJob" />
         <activity android:name=".EmployerFunctions.EmployerOptions" />
         <activity android:name=".JobSeekerFunctions.EditCV" />
